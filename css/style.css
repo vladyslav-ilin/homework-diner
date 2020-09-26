@@ -1,0 +1,109 @@
+:root{
+    --color-white: #fff;
+    --color-back: #3b3e45;
+    --color-gray: #4a4f55;
+    --color-red: #e2816f;
+    --color-bg-form: #88839f; 
+    --color-bg-even: #7a7593;
+    --color-bg-hover: #625e77;
+    --color-span: #c2c4ca;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    min-height: 100%;
+    border: 20px solid var(--color-white);
+}
+body{
+    font-family: 'Trebuchet MS', Trebuchet, Arial, sans-serif;
+    font-size: 18px;
+    background: var(--color-back);
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header{
+    padding: 20px 0;
+    text-align: center;
+    color: var(--color-red);
+    background: var(--color-gray);
+}
+.header__title{
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.header__text{
+    font-size: 28px;
+    line-height: 36px;
+}
+.check{
+    padding: 20px 0;
+    width: 60%;
+    margin: 0 auto;
+}
+.check__form-list li{
+    background: var(--color-bg-form);
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in;
+    position: relative;
+}
+.check__form-list li:nth-child(even){
+    background: var(--color-bg-even);
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+}
+.check__form-list li:hover{
+    border-bottom: 4px solid var(--color-white);
+    border-top: 4px solid var(--color-white);
+    background: var(--color-bg-hover);
+}
+.check__form-list [type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+.check__form-list label{
+    display: block;
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--color-white);
+    transition: all .3s ease;
+    position: relative;
+}
+.check__form-list input:checked + label{
+    text-decoration: line-through;
+}
+.check__form-list label span{
+    color: var(--color-span);
+    font-size: 14px;
+}
+.footer{
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+.footer__btn{
+    color: var(--color-red);
+    font-size: 28px;
+    line-height: 36px;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0;
+    background: var(--color-gray);
+}
